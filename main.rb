@@ -24,7 +24,10 @@ end
 
 if __FILE__ == $0
   stage = Stage.new(ARGV[0])
+  puts "Question is :" if $DEBUG
+  puts stage        if $DEBUG
 
-  stage.solve
+  solved = stage.solve
+  puts (solved ? "Answer is :" : "Not solved ... :") if $DEBUG
   print stage
 end
